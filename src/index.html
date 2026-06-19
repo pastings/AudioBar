@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudioBar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="audiobar-container" id="bar-container">
+        
+        <div class="action-group">
+            <button class="icon-btn" id="lock-toggle" title="Lock Position">
+                <i class="ri-lock-unlock-line" id="lock-icon"></i>
+            </button>
+            <button class="icon-btn" id="settings-toggle" title="Settings">
+                <i class="ri-equalizer-line" id="settings-icon"></i>
+            </button>
+        </div>
+
+        <div class="track-info">
+            <div class="meta-text">
+                <h1 class="track-title">AUDIOBAR</h1>
+                <p class="track-artist" id="artist-text">ACTIVE LISTENER</p>
+            </div>
+        </div>
+
+        <div class="center-display">
+            <div class="visualizer-main active" id="visualizer-mesh"></div>
+            
+            <div class="settings-mesh" id="settings-mesh">
+                <div class="settings-group">
+                    <span class="settings-label">THEME</span>
+                    <div class="swatch-container">
+                        <button class="color-swatch active" data-hex="#bc13fe" data-glow="rgba(188, 19, 254, 0.5)" style="--swatch-color: #bc13fe;"></button>
+                        <button class="color-swatch" data-hex="#00e5ff" data-glow="rgba(0, 229, 255, 0.5)" style="--swatch-color: #00e5ff;"></button>
+                        <button class="color-swatch" data-hex="#ff2a3f" data-glow="rgba(255, 42, 63, 0.5)" style="--swatch-color: #ff2a3f;"></button>
+                        <button class="color-swatch" data-hex="#00ff66" data-glow="rgba(0, 255, 102, 0.5)" style="--swatch-color: #00ff66;"></button>
+                        <button class="color-swatch" data-hex="#ffffff" data-glow="rgba(255, 255, 255, 0.4)" style="--swatch-color: #ffffff;"></button>
+                    </div>
+                </div>
+                <div class="settings-divider"></div>
+                <div class="settings-group">
+                    <span class="settings-label">SENSITIVITY</span>
+                    <input type="range" id="sensitivity-slider" class="custom-slider" min="0.5" max="2.5" step="0.1" value="1.2">
+                </div>
+            </div>
+        </div>
+
+        <div class="utility-status">
+            <div class="status-indicator">
+                <div class="accent-dot"></div>
+                <span>LISTENING</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
